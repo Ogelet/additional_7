@@ -57,6 +57,7 @@ module.exports = function solveSudoku(matrix){
         if(checkZero()){
         if(check(n,i,j)){
           newMatrix[i][j] = n;
+          console.log(n);
           stagesArray[stagesArray.length - 1][2] = n;
           if(!checkZero()){
             return
@@ -116,6 +117,7 @@ module.exports = function solveSudoku(matrix){
   if(checkZero()){
     findZero();
   };
+  console.log(newMatrix);
   return newMatrix;
 };
 
